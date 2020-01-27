@@ -1,0 +1,313 @@
+<html>
+  <head>
+    <title>Premier League</title>
+    <!--Using Bebas Neue and Hind Vadodara from Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara:300,400,700&display=swap" rel="stylesheet">
+    <!--All styling was completed here-->
+    <style>
+	body {
+		font-family: 'Hind Vadodara', sans-serif;
+		text-align: center;
+		background-size: cover;
+		background-image: url("soccer_background.png");
+		color: white;
+		background-position: center;
+	}
+	
+	input {background-color: white;
+		border: none;
+		color: rgb(183, 140, 209);
+		text-align: center;
+		padding: 5px 7px;
+		border-radius: 8px;
+		font-weight: bold;
+	}
+	
+	h1 {font-family: 'Bebas Neue';
+		font-size: 50px;
+		margin: 0px;
+		letter-spacing: 2px;
+	}
+
+	.title {font-size: 150px;
+		letter-spacing: 0px;
+		color: rgb(183, 140, 209);
+	}
+
+	h3 {margin: 0px;
+		font-family: 'Bebas Neue';
+		letter-spacing: 1px;
+		padding-bottom: 10px;
+		color: white;
+		font-size: 25px;
+	}
+
+	.header {
+		background-color: transparent; 
+		background-size: cover;
+		margin: 0px 0px 20px 0px;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;	
+	}
+
+	.header-text { vertical-align: middle;}
+	
+	.table {margin-left: auto;
+		margin-right: auto;
+		border: 2px solid white;
+		border-collapse: collapse;
+		background-color: rgba(183, 140, 209, 0.4);
+		width: 300px;
+	}
+
+	tr, td {border: 1px solid white;
+		text-align: left;
+		padding: 10px;}
+	
+	.rank { text-align: center; }
+
+	.col-title {font-family: 'Bebas Neue';
+			letter-spacing: 1px;
+			font-size: 20px;
+			text-align: left;
+	}
+	
+	.button {margin: 5px;
+		padding: 8px;
+		font-size: 1em;
+		font-family: 'Bebas Neue';
+		letter-spacing: 1px;
+	}
+
+	p { margin: 0px;
+		font-family: 'Bebas Neue';
+		font-size: 30px;}
+
+	div {margin: 20px 0px;}
+
+	.row {display: inline-block;
+		margin: 5%;}
+
+	.row-with-table {margin: 10px;}
+	
+	a {font-family: 'Bebas Neue';}
+    </style>
+  </head>
+  <body>
+	  <!--Webpage header-->
+	<div class="header">
+		  <div class="header-text">
+			  <h1 class="header-text"> Welcome to the <div class="title">Premier League</div></h1>
+			  <h3 class="header-text"> Find information on your favorite player, team, or particular game </h3>
+		  </div>
+	</div>
+
+	<!--Allows user to find specific players or find game results-->
+	<div>
+		<div class="row">	
+		<p>Find player information</p>
+		<form action="update.php" method="post">
+		Player Name: <input type="text" name="player"><br>
+		Enter Player Info OR Player Statistics: <input type="text" name="req"><br>
+		<input type="submit" name="button1" class="button" value="Get Player">  
+		</div>
+		
+		<div class="row">
+                <p>Look up a game</p>
+                <form action="update.php" method="post">
+                Home Team: <input type="text" name="home"><br>
+                Away Team: <input type="text" name="away"><br>
+                <input type="submit" name="button2" class="button" value="Find Game">
+		</div>
+	</div>
+	
+
+	<!--Creates table with radio buttons for easy lookup of teams-->
+	<div>
+		<p>Find a team</p>
+		<div class="row row-with-table">
+		<table class="table">
+			<tr>
+				<td class="col-title"><strong>Rank<strong></td>
+				<td class="col-title"><strong>Team</strong></td>
+			</tr>
+			<tr>
+				<td class="rank">1</td>
+				<td><input type="radio" name="team" value="Manchester City">Manchester City</td>
+			</tr>
+			<tr>
+				<td class="rank">2</td>
+				<td><input type="radio" name="team" value="Liverpool">Liverpool</td>
+			</tr>
+			<tr>
+				<td class="rank">3</td>
+				<td><input type="radio" name="team" value="Chelsea">Chelsea</td>
+			</tr>
+			<tr>
+				<td class="rank">4</td>
+				<td><input type="radio" name="team" value="Tottenham Hotspur">Tottenham Hotspur</td>
+			</tr>
+			<tr>
+				<td class="rank">5</td>
+				<td><input type="radio" name="team" value="Arsenal">Arsenal</td>
+			</tr>
+					
+			<tr>
+				<td class="rank">6</td>
+				<td><input type="radio" name="team" value="Manchester United">Manchester United</td>
+			</tr>
+			<tr>
+				<td class="rank">7</td>
+				<td><input type="radio" name="team" value="Wolverhampton Wanderers">Wolves</td>
+			</tr>
+			</tr>
+				<td class="rank">8</td>
+				<td><input type="radio" name="team" value="Everton">Everton</td>
+			</tr>
+			<tr>
+				<td class="rank">9</td>   
+				<td><input type="radio" name="team" value="Leicester City">Leicester City</td>
+			</tr>
+			<tr>
+				<td class="rank">10</td>
+				<td><input type="radio" name="team" value="West Ham United">West Ham United</td>
+			</tr>
+		</table>
+		</div>
+
+		<div class="row row-with-table">
+			<table class="table">
+			<tr>
+				<td class="col-title"><strong>Rank</strong></td>
+				<td class="col-title"><strong>Team</strong></td>
+			</tr>
+			<tr>
+				<td class="rank">11</td>
+				<td><input type="radio" name="team" value="Watford">Watford</td>
+			</tr>
+			<tr>
+				<td class="rank">12</td>
+				<td><input type="radio" name="team" value="Crystal Palace">Crystal Palace</td>
+			<tr>
+			<tr>
+				<td class="rank">13</td>
+				<td><input type="radio" name="team" value="Newcastle United">Newcastle United</td>
+			</tr>
+			<tr>
+				<td class="rank">14</td>
+				<td><input type="radio" name="team" value="AFC Bournemouth">AFC Bournemouth</td>
+			</tr>
+			<tr>
+				<td class="rank">15</td>
+				<td><input type="radio" name="team" value="Burnley">Burnley</td>
+			</tr>
+			<tr>
+				<td class="rank">16</td>
+				<td><input type="radio" name="team" value="Southampton">Southampton</td>
+			</tr>
+			<tr>
+				<td class="rank">17</td>
+				<td><input type="radio" name="team" value="Brighton & Hove Albion">Brighton & Hove Albion</td>
+			</tr>
+			<tr>
+				<td class="rank">18</td>
+				<td><input type="radio" name="team" value="Cardiff City">Cardiff City</td>
+			</tr>
+			<tr>
+				<td class="rank">19</td>
+				<td><input type="radio" name="team" value="Fulham">Fulham</td>
+			</tr>
+			<tr>
+				<td class="rank">20</td>
+				<td><input type="radio" name="team" value="Huddersfield Town">Huddersfield Town</td>
+			</tr>
+			</table>
+		</div>
+
+	</div>
+	
+	<div>
+	<div class="row row-with-table">
+		<form action="update.php" method="post">
+		<input type="submit" name="button3" class="button" value="Select Team">
+	</div>
+	</div>
+
+	<!--Find a stadium and its home team players or a country and its player-->
+	<div>
+	<div class="row">
+                <p>Find a stadium</p>
+                <form action="update.php" method="post">
+                Enter Stadium Name or "select all": <input type="text" name="sname"><br>
+                <input type="submit" name="button4" class="button" value="Submit">
+        </div>
+
+	<div class="row">
+                <p>Find a country and its players</p>
+                <form action="update.php" method="post">
+                Enter Country Name: <input type="text" name="country_name"><br>
+                <input type="submit" name="button5" class="button" value="Submit">
+        </div>
+	</div>
+
+	<div class="row">
+		<p>Get Ranking By Position</p>
+		Enter Position (Midfielder, Defender, Forward, Goalkeeper): <input type="text" name="playertype"><br>
+		<input type="submit" name="button6" class="button" value="Rank">
+	</div>
+
+
+	<!--Find the nationalities breakdown of a club, 
+	 or compare two players in the league-->
+	<div>
+	<div class="row"> 
+		<p>Club Nationalities</p>
+		<form action="update.php" method="post">
+		Enter Team Name: <input type="text" name="team_name"><br>
+		<input type="submit" name="button8" class="button" value="Submit">
+	</div>
+	<div class="row">
+		<p>Compare two players</p>
+		<form action="update.php" method="post">
+		Enter Player Name: <input type="text" name="player1"><br>
+		Enter Player Name: <input type="text" name="player2"><br>
+		<input type="submit" name="button7" class="button" value="Compare">
+	</div>
+	</div>
+
+	<!--Find the top goal scorers/assisters-->
+	<div>
+		<div class="row">
+		<p>Find top goal scorers</p>
+		Enter Goal Count: <input type="text" name="goals"><br>
+		<input type="submit" name="button9" class="button" value="Go">
+		</div>
+
+		<div class="row">
+		<p>Find top assisters</p>
+		Enter Assist Count: <input type="text" name="assists"><br>
+		<input type="submit" name="button10" class="button" value="Go">
+		</div>
+	</div>
+
+	<!--Examine how country characteristics impact players 
+	 and find the top player from a specified country-->
+	<div>
+		<div class="row">
+			<p>How do country characteristics impact players?</p>
+			Enter Factor (Birthrate, Deathrate, Literacy Rate): <input type="text" name="factor"><br>
+			<input type="submit" name="button11" class="button" value="Submit">
+		</div>
+		<div class="row">
+			<p>Top Player From Country</p>
+			Enter Country Name: <input type="text" name="cname"><br>
+			<input type="submit" name="button12" class="button" value="Submit">
+		</div>
+	</div>
+
+
+  </html>
+  </body>
