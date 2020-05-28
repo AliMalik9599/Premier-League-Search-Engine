@@ -45,8 +45,8 @@
 <?php
 	/* Connecting to database*/
     $dbhost = 'dbase.cs.jhu.edu:3306';
-    $dbuser = '19_amalik36';
-    $dbpass = 'abcdefg';
+    $dbuser = 'sampleName';
+    $dbpass = 'samplePass';
     $dbname = 'cs415_fall_19_amalik36';
     $conn = mysql_connect($dbhost, $dbuser, $dbpass);
 
